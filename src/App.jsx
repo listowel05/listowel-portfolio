@@ -140,7 +140,7 @@ function Portfolio({ setView }) {
   ];
 
   const projects = [
-    { category: "Data Analytics & BI", title: "Public Housing & Demographics Dashboard", desc: "Interactive Power BI dashboard tracking regional housing trends, compliance metrics, and demographic distributions in Ghana.", bullets: ["Real-time KPI tracking", "Data visualization", "Centralized public datasets"], tech: ["Power BI", "SQL", "Python (Pandas)"], link: "#", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" },
+    { category: "Data Analytics & BI", title: "Public Housing & Demographics Dashboard", desc: "Interactive Power BI dashboard tracking regional housing trends, compliance metrics, and demographic distributions in Ghana.", bullets: ["Real-time KPI tracking", "Data visualization", "Centralized public datasets"], tech: ["Power BI", "SQL", "Python (Pandas)"], link: "https://listowel.delofy.com/ghana_housing_analytics_listowel_owusu.html", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" },
     { category: "Full-Stack Web Engineering", title: "HHC Care Network Canada", desc: "A comprehensive healthcare service platform connecting patients with caregivers through a seamless, accessible digital interface.", bullets: ["Clean UI/UX architecture", "Secure user data handling", "Responsive mobile-first design"], tech: ["React", "TypeScript", "Tailwind CSS"], link: "https://hhccare.ca/", image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop" },
     { category: "Data Science & BI", title: "Enterprise Revenue Predictor", desc: "Machine learning pipeline and BI dashboard forecasting quarterly revenue trends, customer churn, and dynamic pricing strategies.", bullets: ["Time-series forecasting", "Predictive churn modeling", "Strategic business intelligence"], tech: ["Python (Scikit-Learn)", "Tableau", "SQL"], link: "#", image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop" },
     { category: "Full-Stack Web Engineering", title: "Delofy Corporate Platform", desc: "Production-ready corporate web application featuring secure e-commerce capabilities and background data payload processing.", bullets: ["Cryptographic authentication", "Background data processing", "Scalable infrastructure"], tech: ["React", "PHP", "JSON Payloads"], link: "https://delofy.com/", image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800&auto=format&fit=crop" },
@@ -371,7 +371,7 @@ function Portfolio({ setView }) {
               one line at a time.
             </h2>
             <div className="text-[#4b5563] text-sm md:text-lg leading-relaxed space-y-4 md:space-y-6">
-              <p>I am a Certified Business Analyst and versatile Full-Stack Web Engineer. I specialize in data-driven strategies. I architect automated business data pipelines and leverage advanced analytics, including SQL, Python (Pandas), and Power BI, to centralize data, mitigate operational risks, and enforce data privacy compliance.</p>
+              <p>I am a Certified Business Analyst and versatile Full-Stack Web Engineer. I specialize in data-driven strategies. I architect automated business data pipelines and leverage advanced analytics—including SQL, Python (Pandas), and Power BI—to centralize data, mitigate operational risks, and enforce data privacy compliance.</p>
               <p>Beyond data analytics, my technical foundation spans across modern frontend interfaces and robust backend architectures, allowing me to engineer web applications using React, Next.js, Node.js, and Python.</p>
               <p>My goal is to translate complex technical requirements and behavioral metrics into practical, high-performance commercial tools that solve real organizational problems.</p>
             </div>
@@ -459,16 +459,9 @@ function Portfolio({ setView }) {
                         ))}
                       </div>
                       {project.link !== "#" ? (
-                        <a href={project.link} target="_blank" rel="noreferrer" className="w-full sm:w-auto text-center bg-[#ea580c] hover:bg-[#c2410c] text-white px-5 md:px-6 py-2 md:py-2.5 rounded font-bold transition-colors text-xs md:text-sm whitespace-nowrap shadow-md">Live Demo</a>
+                        <a href={project.link} target="_blank" rel="noreferrer" className="w-full sm:w-auto text-center bg-[#ea580c] hover:bg-[#c2410c] text-white px-5 md:px-6 py-2 md:py-2.5 rounded font-bold transition-colors text-xs md:text-sm whitespace-nowrap shadow-md">View Live Demo</a>
                       ) : (
-                        <a 
-  href="/ghana_housing_analytics_listowel_owusu.html" 
-  target="_blank" 
-  rel="noopener noreferrer"
-  className="inline-block px-4 py-2 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors"
->
-  View Live Dashboard
-</a>
+                        <span className="w-full sm:w-auto text-center border border-white/20 text-white/50 px-5 md:px-6 py-2 md:py-2.5 rounded font-bold text-xs md:text-sm whitespace-nowrap cursor-not-allowed">In Development</span>
                       )}
                     </div>
                   </div>
@@ -527,12 +520,12 @@ function Portfolio({ setView }) {
                 <div className="relative">
                   <div className="absolute -left-[29px] md:-left-[37px] top-1.5 w-2 md:w-2.5 h-2 md:h-2.5 rounded-full bg-[#ea580c]"></div>
                   <h4 className="text-base md:text-xl font-bold text-[#111111]">M.Sc. Data and Business Analytics</h4>
-                  <p className="text-[11px] md:text-sm font-semibold text-[#6b7280] mt-1 mb-2 md:mb-3">Kwame Nkrumah University of Science and Technology | 2026 - Present</p>
+                  <p className="text-[11px] md:text-sm font-semibold text-[#6b7280] mt-1 mb-2 md:mb-3">KNUST | 2026 - Present</p>
                   <p className="text-[#4b5563] text-xs md:text-sm leading-relaxed"><strong>Relevant Coursework:</strong> Applied Regression Analysis, Statistical Inference, Prompt Engineering, SQL, Python, R, Tableau, Power BI, Probability and Stochastic Models.</p>
                 </div>
                 <div className="relative">
                   <div className="absolute -left-[29px] md:-left-[37px] top-1.5 w-2 md:w-2.5 h-2 md:h-2.5 rounded-full bg-[#ea580c]"></div>
-                  <h4 className="text-base md:text-xl font-bold text-[#111111]">BSc. Information Technology & Psychology</h4>
+                  <h4 className="text-base md:text-xl font-bold text-[#111111]">B.Ed. Information Technology & Psychology</h4>
                   <p className="text-[11px] md:text-sm font-semibold text-[#6b7280] mt-1 mb-2 md:mb-3">University of Education, Winneba | 2020 - 2024</p>
                   <p className="text-[#4b5563] text-xs md:text-sm leading-relaxed"><strong>Relevant Coursework:</strong> Data Structures and Algorithms, Database Management Systems, Object-Oriented Programming, Information Assurance, Measurement & Statistics.</p>
                 </div>

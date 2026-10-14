@@ -461,7 +461,14 @@ function Portfolio({ setView }) {
                       {project.link !== "#" ? (
                         <a href={project.link} target="_blank" rel="noreferrer" className="w-full sm:w-auto text-center bg-[#ea580c] hover:bg-[#c2410c] text-white px-5 md:px-6 py-2 md:py-2.5 rounded font-bold transition-colors text-xs md:text-sm whitespace-nowrap shadow-md">Live Demo</a>
                       ) : (
-                        <span className="w-full sm:w-auto text-center border border-white/20 text-white/50 px-5 md:px-6 py-2 md:py-2.5 rounded font-bold text-xs md:text-sm whitespace-nowrap cursor-not-allowed">In Development</span>
+                        <a 
+  href="/ghana_housing_analytics_listowel_owusu.html" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="inline-block px-4 py-2 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors"
+>
+  View Live Dashboard
+</a>
                       )}
                     </div>
                   </div>

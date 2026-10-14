@@ -371,7 +371,7 @@ function Portfolio({ setView }) {
               one line at a time.
             </h2>
             <div className="text-[#4b5563] text-sm md:text-lg leading-relaxed space-y-4 md:space-y-6">
-              <p>I am a Certified Business Analyst and versatile Full-Stack Web Engineer. I specialize in data-driven strategies. I architect automated business data pipelines and leverage advanced analytics—including SQL, Python (Pandas), and Power BI—to centralize data, mitigate operational risks, and enforce data privacy compliance.</p>
+              <p>I am a Certified Business Analyst and versatile Full-Stack Web Engineer. I specialize in data-driven strategies. I architect automated business data pipelines and leverage advanced analytics, including SQL, Python (Pandas), and Power BI, to centralize data, mitigate operational risks, and enforce data privacy compliance.</p>
               <p>Beyond data analytics, my technical foundation spans across modern frontend interfaces and robust backend architectures, allowing me to engineer web applications using React, Next.js, Node.js, and Python.</p>
               <p>My goal is to translate complex technical requirements and behavioral metrics into practical, high-performance commercial tools that solve real organizational problems.</p>
             </div>

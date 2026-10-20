@@ -47,7 +47,13 @@
                 <span>Machine Learning</span>
                 <span>Data Engineering</span>
             </div>
-            <div class="text-xs font-bold uppercase tracking-widest text-orange-600 border border-orange-200 px-3 py-1.5 rounded-full bg-orange-50">Enterprise BI Showcase</div>
+            <div class="flex items-center gap-4">
+                <a href="https://listowel.delofy.com" target="_blank" class="px-4 py-2 text-xs font-semibold rounded-lg bg-orange-600 hover:bg-orange-700 text-white shadow-lg shadow-orange-500/25 transition-all flex items-center gap-1.5">
+                    <span>listowel.delofy.com</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+                <div class="hidden md:block text-xs font-bold uppercase tracking-widest text-orange-600 border border-orange-200 px-3 py-1.5 rounded-full bg-orange-50">Enterprise BI Showcase</div>
+            </div>
         </div>
     </nav>
 
@@ -69,7 +75,7 @@
                         Recent government disclosures revealed a <strong>$1.7M USD</strong> allocation for digitalizing the Rent Control Department. However, advanced operational modeling suggests this baseline is highly vulnerable to cost overruns if target Service Level Agreements (SLAs) and nationwide deployment scales are mandated.
                     </p>
                     <p>
-                        This enterprise-grade predictive dashboard utilizes a dynamic cost-scaling algorithm to forecast the <strong>exact capital expenditure</strong> and hidden operational risks required. Adjust the parameters to generate live cost projections, regional risk heatmaps, and system readiness metrics.
+                        This enterprise-grade predictive dashboard utilizes a dynamic cost-scaling algorithm to forecast the <strong>exact capital expenditure</strong> and hidden operational risks required. Adjust the parameters to generate live cost projections, regional risk heatmaps and system readiness metrics.
                     </p>
                 </div>
                 <div class="glass-panel p-6 bg-orange-50/30 border-orange-100">
@@ -102,7 +108,7 @@
                             <span id="val-cases" class="font-mono text-sm font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">65,000</span>
                         </div>
                         <input type="range" id="slider-cases" min="20000" max="150000" value="65000" step="1000">
-                        <p class="text-[11px] text-slate-500 mt-1">Impacts database scaling, storage, and USSD/API quotas.</p>
+                        <p class="text-[11px] text-slate-500 mt-1">Represents national dispute volume. Scales cloud storage, database nodes and SMS/API quotas.</p>
                     </div>
 
                     <!-- Slider 2 -->
@@ -112,7 +118,7 @@
                             <span id="val-time" class="font-mono text-sm font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">14 Days</span>
                         </div>
                         <input type="range" id="slider-time" min="5" max="90" value="14" step="1">
-                        <p class="text-[11px] text-slate-500 mt-1">Shorter SLAs demand exponential investments in AI/NLP screening.</p>
+                        <p class="text-[11px] text-slate-500 mt-1">Driving resolution down requires substituting human review with expensive AI/NLP automation engineering.</p>
                     </div>
 
                     <!-- Slider 3 -->
@@ -122,7 +128,7 @@
                             <span id="val-adopt" class="font-mono text-sm font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">75%</span>
                         </div>
                         <input type="range" id="slider-adopt" min="10" max="100" value="75" step="5">
-                        <p class="text-[11px] text-slate-500 mt-1">Dictates civic education, marketing, and mobile app support budgets.</p>
+                        <p class="text-[11px] text-slate-500 mt-1">Target citizen usage. High targets scale quadratically due to nationwide public education and USSD subsidization.</p>
                     </div>
 
                     <!-- Slider 4 -->
@@ -132,7 +138,7 @@
                             <span id="val-regions" class="font-mono text-sm font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">16</span>
                         </div>
                         <input type="range" id="slider-regions" min="1" max="16" value="16" step="1">
-                        <p class="text-[11px] text-slate-500 mt-1">Biometric hardware and physical IT infrastructure per district.</p>
+                        <p class="text-[11px] text-slate-500 mt-1">Physical hardware parameters. Governs procurement of biometric tablets and district server nodes.</p>
                     </div>
                 </div>
             </div>
@@ -154,7 +160,7 @@
                     <div class="glass-panel p-6 flex flex-col justify-center border-l-4 border-l-blue-500">
                         <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-1">Est. Payback Period</p>
                         <div class="text-3xl font-black text-slate-900" id="payback-period">3.4 Years</div>
-                        <p class="text-xs text-slate-500 mt-2">Based on recovered administrative efficiencies and reduced paper backlog.</p>
+                        <p class="text-xs text-slate-500 mt-2">Based on recovered administrative efficiencies and reduced paper backlog over time.</p>
                     </div>
                 </div>
 
@@ -162,13 +168,13 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="glass-panel p-5 h-[340px] flex flex-col">
                         <h3 class="text-sm font-extrabold text-slate-800 mb-1">Resource Allocation Breakdown</h3>
-                        <p class="text-xs text-slate-500 mb-2">Distribution of projected capital vs operational budgets.</p>
+                        <p class="text-[10px] text-slate-500 mb-2">Highlights that core infrastructure is minimal compared to regional hardware and marketing.</p>
                         <div id="chart-donut" class="flex-1 w-full"></div>
                     </div>
                     
                     <div class="glass-panel p-5 h-[340px] flex flex-col">
                         <h3 class="text-sm font-extrabold text-slate-800 mb-1">Top 5 Regional CapEx Burn</h3>
-                        <p class="text-xs text-slate-500 mb-2">Highest capital required by geographic and demographic zone.</p>
+                        <p class="text-[10px] text-slate-500 mb-2">Indicates which regions require prioritization under constrained budgets (Accra & Ashanti).</p>
                         <div id="chart-bar" class="flex-1 w-full"></div>
                     </div>
                 </div>
@@ -176,8 +182,8 @@
                 <!-- Row 2 Charts -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="glass-panel p-5 h-[340px] flex flex-col">
-                        <h3 class="text-sm font-extrabold text-slate-800 mb-1">10-Year ROI Trajectory</h3>
-                        <p class="text-xs text-slate-500 mb-2">Cumulative costs vs compounded operational savings.</p>
+                        <h3 class="text-sm font-extrabold text-slate-800 mb-1">10-Year ROI Trajectory (2026-2035)</h3>
+                        <p class="text-[10px] text-slate-500 mb-2">Plots total spend (Red) vs administrative savings (Green) to determine breakeven point.</p>
                         <div id="chart-line" class="flex-1 w-full"></div>
                     </div>
                     
@@ -185,7 +191,7 @@
                         <div class="flex justify-between items-start">
                             <div>
                                 <h3 class="text-sm font-extrabold text-slate-800 mb-1">Regional Implementation Risk Matrix</h3>
-                                <p class="text-xs text-slate-500 mb-2">Heatmap cross-tabulating adoption bottlenecks vs hardware deficits.</p>
+                                <p class="text-[10px] text-slate-500 mb-2">Forewarns project failure points by cross-referencing SLA strains against regional density.</p>
                             </div>
                             <span class="text-[10px] font-bold bg-slate-100 text-slate-500 px-2 py-1 rounded">Darker = Higher Risk</span>
                         </div>
@@ -200,7 +206,7 @@
         <div class="mb-16">
             <h2 class="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
                 <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                Executive Decision Briefing
+                Strategic Recommendations & Executive Briefing
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -240,6 +246,7 @@
 
         <!-- FULL RESEARCH PAPER SECTION -->
         <section id="research-paper" class="mb-20 glass-panel bg-white border-t-8 border-t-orange-600">
+            <!-- Ensure this details tag does NOT have the 'open' attribute so it stays closed by default -->
             <details class="group w-full">
                 <summary class="flex justify-between items-center w-full cursor-pointer list-none p-6 md:p-10 outline-none">
                     <div class="flex items-center gap-4">
@@ -269,8 +276,8 @@
                                 <span class="bg-blue-100 text-blue-700 w-8 h-8 rounded flex items-center justify-center text-sm">1</span> 
                                 Abstract & Executive Summary
                             </h4>
-                            <p class="mb-4">In September 2026, the Government of Ghana, via the Ministry of Works and Housing, announced a <strong>$1.7 million USD</strong> capital expenditure allocation to comprehensively digitalize the Rent Control Department. The strategic objective encompasses the eradication of paper-based administrative backlogs, the reduction of dispute resolution Service Level Agreements (SLAs) from a historical average of 90 days to a streamlined 14-day turnaround, and the elevation of systemic transparency across national landlord-tenant engagements.</p>
-                            <p>This analytical paper, paired with the proprietary predictive model above, rigorously evaluates the fiscal viability of this baseline budget against the proposed SLAs and a nationwide 16-region deployment matrix. Empirical findings indicate that while the $1.7M CapEx is adequate for core infrastructure and a constrained pilot phase (e.g., Greater Accra and Ashanti regions), it represents a severe undercapitalization for a full-scale national rollout demanding >60% digital adoption. This deficit is primarily driven by the quadratic cost scaling associated with public civic education, decentralized USSD database hosting, and the deployment of Natural Language Processing (NLP) for automated triage.</p>
+                            <p class="mb-4">In September 2026, the Government of Ghana, via the Ministry of Works and Housing, announced a <strong>$1.7 million USD</strong> capital expenditure allocation to comprehensively digitalize the Rent Control Department. The strategic objective encompasses the eradication of paper-based administrative backlogs, the reduction of dispute resolution Service Level Agreements (SLAs) from a historical average of 90 days to a streamlined 14-day turnaround and the elevation of systemic transparency across national landlord-tenant engagements.</p>
+                            <p>This analytical paper, paired with the proprietary predictive model above, rigorously evaluates the fiscal viability of this baseline budget against the proposed SLAs and a nationwide 16-region deployment matrix. Empirical findings indicate that while the $1.7M CapEx is adequate for core infrastructure and a constrained pilot phase (e.g., Greater Accra and Ashanti regions), it represents a severe undercapitalization for a full-scale national rollout demanding >60% digital adoption. This deficit is primarily driven by the quadratic cost scaling associated with public civic education, decentralized USSD database hosting and the deployment of Natural Language Processing (NLP) for automated triage.</p>
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start border-t border-slate-100 pt-10">
@@ -281,8 +288,8 @@
                                 </h4>
                                 <p class="mb-4">The predictive engine powering this dashboard leverages a multivariate regression and scaling algorithm to accurately simulate real-world IT deployment overheads within sub-Saharan Africa. Core variables include:</p>
                                 <ul class="list-disc pl-5 space-y-3">
-                                    <li><strong>Core Infrastructure ($800k Baseline):</strong> Secure cloud architecture, API gateways, and primary web/mobile application frameworks.</li>
-                                    <li><strong>Hardware Scaling ($125k per Region):</strong> Procurement of biometric terminals, decentralized server nodes, and technical capacity building for district officers.</li>
+                                    <li><strong>Core Infrastructure ($800k Baseline):</strong> Secure cloud architecture, API gateways and primary web/mobile application frameworks.</li>
+                                    <li><strong>Hardware Scaling ($125k per Region):</strong> Procurement of biometric terminals, decentralized server nodes and technical capacity building for district officers.</li>
                                     <li><strong>SLA Automation Penalty:</strong> Accelerating resolution times necessitates substituting manual review with AI/NLP automation. The capital requirement for this algorithmic efficiency scales inversely with the target SLA duration.</li>
                                     <li><strong>Digital Adoption & Civic Penetration:</strong> Achieving widespread citizen utilization incurs non-linear, quadratic cost scaling due to the necessity of expansive marketing campaigns and subsidized USSD (*xxx#) session overheads.</li>
                                 </ul>
@@ -297,10 +304,34 @@
                                 <p>Should the Ministry strictly cap the expenditure at $1.7M, strategic triage is mandatory. The rollout must be geographically restricted to a maximum of four regions (prioritizing Greater Accra and Ashanti, which historically account for ~70% of the national dispute volume) and temporally relaxed to a 45-60 day SLA to mitigate the prohibitive costs of deep AI automation engineering.</p>
                             </div>
                         </div>
-                        
+
+                        <div class="border-t border-slate-100 pt-10">
+                            <h4 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                                <span class="bg-blue-100 text-blue-700 w-8 h-8 rounded flex items-center justify-center text-sm">4</span> 
+                                Model Explanatory Notes & Technical Breakdown
+                            </h4>
+                            <p class="mb-4">This section details the functional definitions of the interactive dashboard modules, providing stakeholders with clear interpretations of the machine learning inputs and subsequent visual outputs.</p>
+
+                            <h5 class="font-bold text-slate-800 mt-6 mb-2">I. The Deployment Variables (Predictive Inputs)</h5>
+                            <ul class="list-disc pl-5 space-y-3">
+                                <li><strong>Annual Cases Formed (e.g., 65,000):</strong> This represents the projected volume of rent disputes filed nationwide. As volume scales up, the predicted budget directly increases to accommodate necessary cloud storage expansion, database server nodes and higher API/SMS text message quota fees required to manage the traffic load.</li>
+                                <li><strong>Target SLA / Resolution Time (e.g., 14 Days):</strong> The legacy manual process averages ~90 days per resolution. Forcing this timeline down to 14 days requires substituting human review with Artificial Intelligence and Natural Language Processing (NLP) to autonomously sort and triage cases. Consequently, lowering this slider drastically increases the required budget due to the high cost of algorithmic automation engineering.</li>
+                                <li><strong>Est. Digital Adoption (e.g., 75%):</strong> This indicates the percentage of landlords and tenants expected to utilize the digital portal. High adoption targets mandate significant financial outlays for nationwide civic education, public marketing campaigns and subsidizing USSD (*xxx#) codes to ensure accessibility for populations without smartphones.</li>
+                                <li><strong>Regions Deployed (e.g., 16):</strong> This governs the physical hardware logistics. A 16-region rollout requires procuring biometric scanners, physical server nodes and diagnostic tablets for every district office in Ghana. Reducing this to a pilot phase (e.g., 4 regions) significantly reduces the initial Capital Expenditure (CapEx).</li>
+                            </ul>
+
+                            <h5 class="font-bold text-slate-800 mt-6 mb-2">II. Visual Analytics Interpretation</h5>
+                            <ul class="list-disc pl-5 space-y-3">
+                                <li><strong>Resource Allocation Breakdown (Donut Chart):</strong> This chart delineates the specific distribution of the projected budget. It visually confirms to stakeholders that the core software architecture constitutes only a fraction of total costs, whereas scaling public marketing and deploying regional hardware represent the bulk of the expenditure.</li>
+                                <li><strong>Top 5 Regional CapEx Burn (Bar Chart):</strong> "CapEx" denotes Capital Expenditure. This visualization identifies which specific geographic regions consume the highest proportion of funding. Consistently, Greater Accra and Ashanti dominate due to high dispute volumes and population density, signaling that constrained budgets should prioritize these specific hubs for pilot programs before attempting national scale.</li>
+                                <li><strong>10-Year ROI Trajectory (Line Chart):</strong> This module proves long-term financial viability. The Red Line illustrates Total Spend (initial CapEx plus ongoing operational maintenance). The Green Line represents "Recovered Efficiencies" (capital saved by eliminating paper workflows, physical storage constraints and reducing administrative man-hours). The point of intersection identifies the <strong>Payback Period</strong> (e.g., ~3.4 years), confirming rapid financial recovery.</li>
+                                <li><strong>Regional Implementation Risk Matrix (Heatmap):</strong> Serving as a predictive risk assessment tool, this heatmap cross-references deployment failure typologies against major hubs. Dark Red zones indicate high probability failure vectors (e.g., forcing a 14-day SLA in Greater Accra spikes delay risks due to volume bottlenecks). Conversely, Yellow/White zones indicate manageable deployments, allowing project managers to preemptively address systemic strains prior to launch.</li>
+                            </ul>
+                        </div>
+
                         <div class="border-t border-slate-100 pt-10">
                             <h4 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                                <span class="bg-emerald-100 text-emerald-700 w-8 h-8 rounded flex items-center justify-center text-sm">4</span> 
+                                <span class="bg-emerald-100 text-emerald-700 w-8 h-8 rounded flex items-center justify-center text-sm">5</span> 
                                 Strategic Recommendations & Executive Briefing
                             </h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -337,7 +368,7 @@
 
                         <div class="mt-12 p-6 bg-orange-50 border-l-4 border-orange-500 rounded-r-lg">
                             <p class="font-black text-slate-900 mb-1">Declaration of Authorship</p>
-                            <p class="text-sm">The data engineering, mathematical cost modeling, front-end architecture, and policy research presented in this document and analytical dashboard were exclusively authored and engineered by <strong>Listowel Owusu</strong> to demonstrate enterprise-grade Business Intelligence and Data Science capabilities.</p>
+                            <p class="text-sm">The data engineering, mathematical cost modeling, front-end architecture and policy research presented in this document and analytical dashboard were exclusively authored and engineered by <strong>Listowel Owusu</strong> to demonstrate enterprise-grade Business Intelligence and Data Science capabilities.</p>
                         </div>
                     </div>
                 </div>
@@ -358,7 +389,7 @@
                         Listowel Owusu<span class="text-orange-600">.</span>
                     </a>
                     <p class="text-slate-400 text-sm leading-relaxed max-w-xl">
-                        <strong>Architect of this Predictive Model.</strong> All underlying research, algorithmic modeling, data engineering, UI/UX design, and dashboard architecture presented on this page were exclusively built from the ground up by Listowel Owusu to showcase enterprise-grade business intelligence capabilities.
+                        <strong>Architect of this Predictive Model.</strong> All underlying research, algorithmic modeling, data engineering, UI/UX design and dashboard architecture presented on this page were exclusively built from the ground up by Listowel Owusu to showcase enterprise-grade business intelligence capabilities.
                     </p>
                     <div class="pt-4 flex flex-wrap gap-2">
                         <span class="px-2 py-1 bg-slate-800 text-xs text-slate-300 rounded border border-slate-700">Predictive Analytics</span>
@@ -378,8 +409,7 @@
                         </div>
                         <span class="text-sm font-medium">listowelowusu05@gmail.com</span>
                     </a>
-                    
-                    <a href="https://wa.me/233246317831" target="_blank" class="flex items-center gap-3 hover:text-white transition-colors group">
+                     <a href="https://wa.me/233246317831" target="_blank" class="flex items-center gap-3 hover:text-white transition-colors group">
                         <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center group-hover:bg-[#25D366] transition-colors">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                         </div>
@@ -427,11 +457,11 @@
         const formatCurrency = (num) => {
             if(num >= 1000000) return '$' + (num / 1000000).toFixed(2) + 'M';
             if(num >= 1000) return '$' + (num / 1000).toFixed(1) + 'k';
-            return '$' + num.toLocaleString();
+            return '$' + Math.round(num).toLocaleString();
         };
 
         // Common Plotly Layout for White Theme
-        const commonLayout = {
+        const baseLayout = {
             paper_bgcolor: 'rgba(255,255,255,1)',
             plot_bgcolor: 'rgba(255,255,255,1)',
             font: { family: 'Inter, sans-serif', color: '#475569', size: 10 },
@@ -441,6 +471,10 @@
             showlegend: false,
             hovermode: 'closest'
         };
+
+        function getLayout() {
+            return JSON.parse(JSON.stringify(baseLayout));
+        }
 
         function updatePrediction() {
             const vCases = parseFloat(sliders.cases.value);
@@ -455,11 +489,11 @@
             labels.regions.innerText = vRegions;
 
             // Algorithm calculations (The Data Science Model)
-            const infraCost = 800000; // Base platform cost
-            const hardwareCost = vRegions * 125000; // Hardware/Training per region
-            const automationCost = (90 - vTime) * 15000; // Lower SLA = higher algo cost
-            const marketingCost = Math.pow(vAdopt/100, 2.2) * 1200000; // Non-linear adoption cost
-            const cloudCost = vCases * 8.5; // Hosting, DB, SMS per case
+            const infraCost = 800000; 
+            const hardwareCost = vRegions * 125000; 
+            const automationCost = (90 - vTime) * 15000; 
+            const marketingCost = Math.pow(vAdopt/100, 2.2) * 1200000; 
+            const cloudCost = vCases * 8.5; 
             
             const exactTotal = infraCost + hardwareCost + automationCost + marketingCost + cloudCost;
 
@@ -473,10 +507,10 @@
 
             // Warning Flag Logic
             if (exactTotal > 1700000) {
-                budgetFlag.className = "px-3 py-1 rounded text-[11px] uppercase tracking-widest font-bold bg-red-100 text-red-700 border border-red-200 mt-2";
+                budgetFlag.className = "px-3 py-1 rounded text-[11px] uppercase tracking-widest font-bold bg-red-100 text-red-700 border border-red-200 mt-2 block";
                 budgetFlag.innerHTML = `⚠️ Deficit: Short by ${formatCurrency(exactTotal - 1700000)} vs Baseline`;
             } else {
-                budgetFlag.className = "px-3 py-1 rounded text-[11px] uppercase tracking-widest font-bold bg-emerald-100 text-emerald-700 border border-emerald-200 mt-2";
+                budgetFlag.className = "px-3 py-1 rounded text-[11px] uppercase tracking-widest font-bold bg-emerald-100 text-emerald-700 border border-emerald-200 mt-2 block";
                 budgetFlag.innerHTML = `✅ Viable: Under $1.7M Baseline`;
             }
 
@@ -491,12 +525,13 @@
                 textposition: 'outside',
                 hovertemplate: '%{label}: $%{value:,.0f}<extra></extra>'
             }];
-            Plotly.react('chart-donut', dataDonut, { ...commonLayout, margin: {t:10, b:10, l:10, r:10} }, {displayModeBar: false, responsive: true});
+            let layoutDonut = getLayout();
+            layoutDonut.margin = {t:10, b:10, l:10, r:10};
+            Plotly.react('chart-donut', dataDonut, layoutDonut, {displayModeBar: false, responsive: true});
 
             // --- RENDER CHART 2: Regional Distribution (Bar) ---
             const topRegions = ['Greater Accra', 'Ashanti', 'Western', 'Eastern', 'Central'];
             const regionWeights = [0.45, 0.25, 0.10, 0.08, 0.05]; 
-            // Scale based on active regions
             const activeWeight = regionWeights.slice(0, Math.min(vRegions, 5));
             const activeRegions = topRegions.slice(0, Math.min(vRegions, 5));
             const regionCosts = activeWeight.map(w => exactTotal * w);
@@ -505,21 +540,23 @@
                 x: activeRegions,
                 y: regionCosts,
                 type: 'bar',
-                marker: { color: '#ea580c', borderRadius: 4 },
+                marker: { color: '#ea580c' },
                 hovertemplate: '%{x}: $%{y:,.0f}<extra></extra>'
             }];
-            Plotly.react('chart-bar', dataBar, { ...commonLayout, yaxis: { title: 'Allocated Cost ($)'} }, {displayModeBar: false, responsive: true});
+            let layoutBar = getLayout();
+            layoutBar.yaxis.title = 'Allocated Cost ($)';
+            Plotly.react('chart-bar', dataBar, layoutBar, {displayModeBar: false, responsive: true});
 
             // --- RENDER CHART 3: ROI Line Chart (10 Year Cumulatives) ---
-            const years = Array.from({length: 10}, (_, i) => 2026 + i);
+            const years = [2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034, 2035];
             const cumulativeCost = [];
             const cumulativeSavings = [];
             let currentCost = exactTotal;
             let currentSavings = 0;
 
             for(let i=0; i<10; i++) {
-                currentCost += (cloudCost * 1.05); // Maintenance growth
-                currentSavings += (annualSavings * Math.pow(1.08, i)); // Compound savings
+                currentCost += (cloudCost * 1.05); 
+                currentSavings += (annualSavings * Math.pow(1.08, i)); 
                 cumulativeCost.push(currentCost);
                 cumulativeSavings.push(currentSavings);
             }
@@ -528,12 +565,13 @@
                 { x: years, y: cumulativeCost, name: 'Cumulative CapEx + OpEx', type: 'scatter', mode: 'lines', line: {color: '#ef4444', width: 3} },
                 { x: years, y: cumulativeSavings, name: 'Recovered Efficiencies', type: 'scatter', mode: 'lines', fill: 'tozeroy', line: {color: '#10b981', width: 2} }
             ];
-            Plotly.react('chart-line', dataLine, { ...commonLayout, showlegend: true, legend: {x: 0, y: 1.15, orientation: 'h'} }, {displayModeBar: false, responsive: true});
+            let layoutLine = getLayout();
+            layoutLine.showlegend = true;
+            layoutLine.legend = {x: 0, y: 1.15, orientation: 'h'};
+            Plotly.react('chart-line', dataLine, layoutLine, {displayModeBar: false, responsive: true});
 
             // --- RENDER CHART 5: Risk Heatmap ---
             const heatmapZ = [
-                // Rows: Cost Overrun, Delay Risk, Adoption Failure
-                // Cols: Accra, Ashanti, Western, Northern
                 [
                     Math.min(100, (exactTotal/1700000)*40), 
                     Math.min(100, (exactTotal/1700000)*25), 
@@ -560,15 +598,16 @@
                 y: ['Budget Overrun Risk', 'SLA Delay Risk', 'Low Adoption Risk'],
                 type: 'heatmap',
                 colorscale: [
-                    [0, '#f8fafc'], // safe (slate-50)
-                    [0.5, '#fcd34d'], // warning (amber-300)
-                    [1, '#ef4444'] // critical (red-500)
+                    [0, '#f8fafc'], 
+                    [0.5, '#fcd34d'], 
+                    [1, '#ef4444'] 
                 ],
                 hoverongaps: false
             }];
             
-            const heatmapLayout = { ...commonLayout, margin: {t:20, b:40, l:130, r:20} };
-            Plotly.react('chart-heatmap', heatmapData, heatmapLayout, {displayModeBar: false, responsive: true});
+            let layoutHeatmap = getLayout();
+            layoutHeatmap.margin = {t:20, b:40, l:130, r:20};
+            Plotly.react('chart-heatmap', heatmapData, layoutHeatmap, {displayModeBar: false, responsive: true});
         }
 
         // Event Listeners

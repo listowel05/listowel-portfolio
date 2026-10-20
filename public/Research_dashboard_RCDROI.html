@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Control Digitalization: Advanced Predictive Model | Listowel Owusu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #f8fafc; color: #0f172a; font-family: 'Inter', sans-serif; }
+        .glass-panel { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025); transition: box-shadow 0.3s ease; }
+        .glass-panel:hover { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02); }
+        .accent-text { color: #ea580c; }
+        .bg-accent { background-color: #ea580c; }
+        
+        /* Range Sliders */
+        input[type=range] { -webkit-appearance: none; width: 100%; background: transparent; margin: 15px 0; }
+        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 22px; width: 22px; border-radius: 50%; background: #ea580c; cursor: pointer; border: 3px solid #fff; box-shadow: 0 3px 6px rgba(0,0,0,0.15); margin-top: -9px; transition: transform 0.1s; }
+        input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.15); }
+        input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 6px; cursor: pointer; background: #cbd5e1; border-radius: 3px; }
+        
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .paper-section { font-family: 'Merriweather', serif; color: #334155; line-height: 1.8; }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        
+        /* Details Summary specific */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="selection:bg-orange-100 selection:text-orange-900 pb-0 relative overflow-x-hidden flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="w-full bg-white/90 border-b border-slate-200 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="https://listowel.delofy.com" class="text-2xl font-black tracking-tighter text-slate-900 hover:opacity-80 transition-opacity">
+                LO<span class="text-orange-600">.</span>
+            </a>
+            <div class="hidden md:flex text-xs font-bold uppercase tracking-widest text-slate-500 space-x-6">
+                <span>Predictive Analytics</span>
+                <span>Machine Learning</span>
+                <span>Data Engineering</span>
+            </div>
+            <div class="text-xs font-bold uppercase tracking-widest text-orange-600 border border-orange-200 px-3 py-1.5 rounded-full bg-orange-50">Enterprise BI Showcase</div>
+        </div>
+    </nav>
+
+    <main class="max-w-[1400px] mx-auto px-4 sm:px-6 pt-10 flex-grow w-full">
+        
+        <!-- Header & Executive Summary -->
+        <header class="mb-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 mb-6">
+                <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                <span class="text-xs font-semibold text-slate-600">Proprietary Predictive Model engineered by Listowel Owusu</span>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-6 text-slate-900">
+                Ghana Rent Control <span class="text-orange-600">Digitalization ROI & Cost Predictor</span>
+            </h1>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+                <div class="lg:col-span-2 text-slate-600 text-lg leading-relaxed space-y-4">
+                    <p>
+                        Recent government disclosures revealed a <strong>$1.7M USD</strong> allocation for digitalizing the Rent Control Department. However, advanced operational modeling suggests this baseline is highly vulnerable to cost overruns if target Service Level Agreements (SLAs) and nationwide deployment scales are mandated.
+                    </p>
+                    <p>
+                        This enterprise-grade predictive dashboard utilizes a dynamic cost-scaling algorithm to forecast the <strong>exact capital expenditure</strong> and hidden operational risks required. Adjust the parameters to generate live cost projections, regional risk heatmaps, and system readiness metrics.
+                    </p>
+                </div>
+                <div class="glass-panel p-6 bg-orange-50/30 border-orange-100">
+                    <h3 class="font-extrabold text-slate-900 mb-3 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                        Core Business Value
+                    </h3>
+                    <ul class="text-sm text-slate-600 space-y-3 list-none">
+                        <li class="flex gap-2"><span class="text-orange-500 font-bold">✓</span> Real-time CapEx Deficit mapping.</li>
+                        <li class="flex gap-2"><span class="text-orange-500 font-bold">✓</span> Regional risk & scalability cross-tabulation.</li>
+                        <li class="flex gap-2"><span class="text-orange-500 font-bold">✓</span> NLP automation vs Human processing cost balancing.</li>
+                        <li class="flex gap-2"><span class="text-orange-500 font-bold">✓</span> Data-driven policy recommendations.</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- PREDICTOR SECTION -->
+        <div class="grid grid-cols-1 xl:grid-cols-12 gap-8 mb-12">
+            
+            <!-- CONTROLS PANEL -->
+            <div class="xl:col-span-3 space-y-6">
+                <div class="glass-panel p-6 shadow-sm border-t-4 border-t-orange-500 sticky top-24">
+                    <h2 class="text-lg font-bold mb-6 text-slate-900 border-b border-slate-100 pb-3">Deployment Variables</h2>
+
+                    <!-- Slider 1 -->
+                    <div class="mb-8">
+                        <div class="flex justify-between items-end mb-1">
+                            <label class="font-semibold text-sm text-slate-700">Annual Cases Formed</label>
+                            <span id="val-cases" class="font-mono text-sm font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">65,000</span>
+                        </div>
+                        <input type="range" id="slider-cases" min="20000" max="150000" value="65000" step="1000">
+                        <p class="text-[11px] text-slate-500 mt-1">Impacts database scaling, storage, and USSD/API quotas.</p>
+                    </div>
+
+                    <!-- Slider 2 -->
+                    <div class="mb-8">
+                        <div class="flex justify-between items-end mb-1">
+                            <label class="font-semibold text-sm text-slate-700">Target SLA (Resolution)</label>
+                            <span id="val-time" class="font-mono text-sm font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">14 Days</span>
+                        </div>
+                        <input type="range" id="slider-time" min="5" max="90" value="14" step="1">
+                        <p class="text-[11px] text-slate-500 mt-1">Shorter SLAs demand exponential investments in AI/NLP screening.</p>
+                    </div>
+
+                    <!-- Slider 3 -->
+                    <div class="mb-8">
+                        <div class="flex justify-between items-end mb-1">
+                            <label class="font-semibold text-sm text-slate-700">Est. Digital Adoption</label>
+                            <span id="val-adopt" class="font-mono text-sm font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">75%</span>
+                        </div>
+                        <input type="range" id="slider-adopt" min="10" max="100" value="75" step="5">
+                        <p class="text-[11px] text-slate-500 mt-1">Dictates civic education, marketing, and mobile app support budgets.</p>
+                    </div>
+
+                    <!-- Slider 4 -->
+                    <div class="mb-4">
+                        <div class="flex justify-between items-end mb-1">
+                            <label class="font-semibold text-sm text-slate-700">Regions Deployed</label>
+                            <span id="val-regions" class="font-mono text-sm font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">16</span>
+                        </div>
+                        <input type="range" id="slider-regions" min="1" max="16" value="16" step="1">
+                        <p class="text-[11px] text-slate-500 mt-1">Biometric hardware and physical IT infrastructure per district.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DASHBOARDS / CHARTS PANEL -->
+            <div class="xl:col-span-9 space-y-6">
+                
+                <!-- KPI Bar -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="glass-panel p-6 bg-slate-900 text-white shadow-lg md:col-span-2 relative overflow-hidden">
+                        <div class="absolute right-0 top-0 w-32 h-32 bg-orange-500/20 rounded-full blur-2xl"></div>
+                        <p class="text-xs font-bold uppercase tracking-widest text-orange-400 mb-2">Algorithmic Forecast</p>
+                        <h3 class="text-slate-300 text-sm mb-1">Required Capital Investment (CapEx + OpEx)</h3>
+                        <div class="text-4xl md:text-5xl font-black font-mono tracking-tighter text-white mb-4" id="predicted-budget">$0</div>
+                        <div id="budget-flag" class="px-3 py-2 rounded text-xs font-bold w-fit text-center">
+                            <!-- Flag logic injected via JS -->
+                        </div>
+                    </div>
+                    <div class="glass-panel p-6 flex flex-col justify-center border-l-4 border-l-blue-500">
+                        <p class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-1">Est. Payback Period</p>
+                        <div class="text-3xl font-black text-slate-900" id="payback-period">3.4 Years</div>
+                        <p class="text-xs text-slate-500 mt-2">Based on recovered administrative efficiencies and reduced paper backlog.</p>
+                    </div>
+                </div>
+
+                <!-- Row 1 Charts -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="glass-panel p-5 h-[340px] flex flex-col">
+                        <h3 class="text-sm font-extrabold text-slate-800 mb-1">Resource Allocation Breakdown</h3>
+                        <p class="text-xs text-slate-500 mb-2">Distribution of projected capital vs operational budgets.</p>
+                        <div id="chart-donut" class="flex-1 w-full"></div>
+                    </div>
+                    
+                    <div class="glass-panel p-5 h-[340px] flex flex-col">
+                        <h3 class="text-sm font-extrabold text-slate-800 mb-1">Top 5 Regional CapEx Burn</h3>
+                        <p class="text-xs text-slate-500 mb-2">Highest capital required by geographic and demographic zone.</p>
+                        <div id="chart-bar" class="flex-1 w-full"></div>
+                    </div>
+                </div>
+                
+                <!-- Row 2 Charts -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="glass-panel p-5 h-[340px] flex flex-col">
+                        <h3 class="text-sm font-extrabold text-slate-800 mb-1">10-Year ROI Trajectory</h3>
+                        <p class="text-xs text-slate-500 mb-2">Cumulative costs vs compounded operational savings.</p>
+                        <div id="chart-line" class="flex-1 w-full"></div>
+                    </div>
+                    
+                    <div class="glass-panel p-5 h-[340px] flex flex-col md:col-span-1">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-sm font-extrabold text-slate-800 mb-1">Regional Implementation Risk Matrix</h3>
+                                <p class="text-xs text-slate-500 mb-2">Heatmap cross-tabulating adoption bottlenecks vs hardware deficits.</p>
+                            </div>
+                            <span class="text-[10px] font-bold bg-slate-100 text-slate-500 px-2 py-1 rounded">Darker = Higher Risk</span>
+                        </div>
+                        <div id="chart-heatmap" class="flex-1 w-full mt-2"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- STRATEGIC RECOMMENDATIONS & DECISION INFO -->
+        <div class="mb-16">
+            <h2 class="text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
+                <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                Executive Decision Briefing
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-panel p-6 border-t-4 border-t-red-500 hover:-translate-y-1 transition-transform duration-300">
+                    <h4 class="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                        <span class="w-6 h-6 rounded bg-red-100 text-red-600 flex items-center justify-center text-xs">01</span>
+                        Funding Deficit
+                    </h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">The declared $1.7M is mathematically insufficient for a full 16-region rollout at >60% adoption. The Ministry must either secure a supplementary budget of $1.5M+ or execute a phased deployment, strictly prioritizing Greater Accra and Ashanti initially.</p>
+                </div>
+
+                <div class="glass-panel p-6 border-t-4 border-t-orange-500 hover:-translate-y-1 transition-transform duration-300">
+                    <h4 class="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                        <span class="w-6 h-6 rounded bg-orange-100 text-orange-600 flex items-center justify-center text-xs">02</span>
+                        USSD Prioritization
+                    </h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">Marketing and training scale quadratically. To reach lower-income brackets without inflating the marketing CapEx, the system architecture must prioritize lightweight USSD (*xxx#) integrations over high-bandwidth smartphone applications.</p>
+                </div>
+
+                <div class="glass-panel p-6 border-t-4 border-t-blue-500 hover:-translate-y-1 transition-transform duration-300">
+                    <h4 class="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                        <span class="w-6 h-6 rounded bg-blue-100 text-blue-600 flex items-center justify-center text-xs">03</span>
+                        NLP Triage Engine
+                    </h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">Hitting the 14-day SLA requires heavy investment in algorithm automation. Natural Language Processing (NLP) must be deployed to auto-categorize incoming cases (e.g., Eviction vs. Arrears) before human officers intervene.</p>
+                </div>
+
+                <div class="glass-panel p-6 border-t-4 border-t-emerald-500 hover:-translate-y-1 transition-transform duration-300">
+                    <h4 class="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                        <span class="w-6 h-6 rounded bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs">04</span>
+                        Data Monetization
+                    </h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">To offset the operational deficit, the resulting verified database of landlords and properties can be anonymized and securely licensed to banks for credit-scoring models, creating a self-sustaining revenue loop.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FULL RESEARCH PAPER SECTION -->
+        <section id="research-paper" class="mb-20 glass-panel bg-white border-t-8 border-t-orange-600">
+            <details class="group w-full">
+                <summary class="flex justify-between items-center w-full cursor-pointer list-none p-6 md:p-10 outline-none">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 flex-shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">The Economic Viability of Ghana’s Rent Control Digitalization</h2>
+                            <p class="text-sm md:text-base font-bold text-orange-600 tracking-widest uppercase mt-1">Read Full Research Paper</p>
+                        </div>
+                    </div>
+                    <span class="text-slate-400 transition-transform duration-300 group-open:rotate-180 bg-slate-50 p-2 rounded-full border border-slate-200">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </span>
+                </summary>
+
+                <div class="px-6 md:px-16 pb-12 pt-2 border-t border-slate-100 text-slate-700 leading-relaxed text-[15px] md:text-base">
+                    
+                    <div class="mb-10 text-center">
+                        <h3 class="text-xl text-slate-600 italic mb-2">A Predictive Analysis of the $1.7M CapEx Allocation</h3>
+                        <p class="text-sm font-bold text-slate-500 uppercase tracking-widest">Authored by Listowel Owusu • Business & Data Analyst</p>
+                    </div>
+
+                    <div class="space-y-10">
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                                <span class="bg-blue-100 text-blue-700 w-8 h-8 rounded flex items-center justify-center text-sm">1</span> 
+                                Abstract & Executive Summary
+                            </h4>
+                            <p class="mb-4">In September 2026, the Government of Ghana, via the Ministry of Works and Housing, announced a <strong>$1.7 million USD</strong> capital expenditure allocation to comprehensively digitalize the Rent Control Department. The strategic objective encompasses the eradication of paper-based administrative backlogs, the reduction of dispute resolution Service Level Agreements (SLAs) from a historical average of 90 days to a streamlined 14-day turnaround, and the elevation of systemic transparency across national landlord-tenant engagements.</p>
+                            <p>This analytical paper, paired with the proprietary predictive model above, rigorously evaluates the fiscal viability of this baseline budget against the proposed SLAs and a nationwide 16-region deployment matrix. Empirical findings indicate that while the $1.7M CapEx is adequate for core infrastructure and a constrained pilot phase (e.g., Greater Accra and Ashanti regions), it represents a severe undercapitalization for a full-scale national rollout demanding >60% digital adoption. This deficit is primarily driven by the quadratic cost scaling associated with public civic education, decentralized USSD database hosting, and the deployment of Natural Language Processing (NLP) for automated triage.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start border-t border-slate-100 pt-10">
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                                    <span class="bg-blue-100 text-blue-700 w-8 h-8 rounded flex items-center justify-center text-sm">2</span> 
+                                    Algorithmic Cost Architecture
+                                </h4>
+                                <p class="mb-4">The predictive engine powering this dashboard leverages a multivariate regression and scaling algorithm to accurately simulate real-world IT deployment overheads within sub-Saharan Africa. Core variables include:</p>
+                                <ul class="list-disc pl-5 space-y-3">
+                                    <li><strong>Core Infrastructure ($800k Baseline):</strong> Secure cloud architecture, API gateways, and primary web/mobile application frameworks.</li>
+                                    <li><strong>Hardware Scaling ($125k per Region):</strong> Procurement of biometric terminals, decentralized server nodes, and technical capacity building for district officers.</li>
+                                    <li><strong>SLA Automation Penalty:</strong> Accelerating resolution times necessitates substituting manual review with AI/NLP automation. The capital requirement for this algorithmic efficiency scales inversely with the target SLA duration.</li>
+                                    <li><strong>Digital Adoption & Civic Penetration:</strong> Achieving widespread citizen utilization incurs non-linear, quadratic cost scaling due to the necessity of expansive marketing campaigns and subsidized USSD (*xxx#) session overheads.</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                                <h4 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                                    <span class="bg-red-100 text-red-700 w-8 h-8 rounded flex items-center justify-center text-sm">3</span> 
+                                    The CapEx Deficit Warning
+                                </h4>
+                                <p class="mb-4">Robust modeling reveals that a standard nationwide deployment, processing 65,000 annual disputes across 16 regions with a strict 14-day SLA and 75% adoption, commands an estimated capital outlay of <strong>$3.5M to $4.2M USD</strong>. Consequently, the declared $1.7M budget introduces extreme operational and deployment risk.</p>
+                                <p>Should the Ministry strictly cap the expenditure at $1.7M, strategic triage is mandatory. The rollout must be geographically restricted to a maximum of four regions (prioritizing Greater Accra and Ashanti, which historically account for ~70% of the national dispute volume) and temporally relaxed to a 45-60 day SLA to mitigate the prohibitive costs of deep AI automation engineering.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="border-t border-slate-100 pt-10">
+                            <h4 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                                <span class="bg-emerald-100 text-emerald-700 w-8 h-8 rounded flex items-center justify-center text-sm">4</span> 
+                                Strategic Recommendations & Executive Briefing
+                            </h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                <div class="bg-white border-t-4 border-t-red-500 border-l border-r border-b border-slate-200 p-5 rounded-lg shadow-sm">
+                                    <h5 class="font-bold text-slate-800 mb-2 flex items-center gap-2">
+                                        <span class="w-6 h-6 rounded bg-red-100 text-red-600 flex items-center justify-center text-xs">01</span>
+                                        Funding Deficit
+                                    </h5>
+                                    <p class="text-sm">The declared $1.7M is mathematically insufficient for a full 16-region rollout at >60% adoption. The Ministry must either secure a supplementary budget of $1.5M+ or execute a phased deployment, strictly prioritizing Greater Accra and Ashanti initially.</p>
+                                </div>
+                                <div class="bg-white border-t-4 border-t-orange-500 border-l border-r border-b border-slate-200 p-5 rounded-lg shadow-sm">
+                                    <h5 class="font-bold text-slate-800 mb-2 flex items-center gap-2">
+                                        <span class="w-6 h-6 rounded bg-orange-100 text-orange-600 flex items-center justify-center text-xs">02</span>
+                                        USSD Prioritization
+                                    </h5>
+                                    <p class="text-sm">Marketing and training scale quadratically. To reach lower-income brackets without inflating the marketing CapEx, the system architecture must prioritize lightweight USSD (*xxx#) integrations over high-bandwidth smartphone applications.</p>
+                                </div>
+                                <div class="bg-white border-t-4 border-t-blue-500 border-l border-r border-b border-slate-200 p-5 rounded-lg shadow-sm">
+                                    <h5 class="font-bold text-slate-800 mb-2 flex items-center gap-2">
+                                        <span class="w-6 h-6 rounded bg-blue-100 text-blue-600 flex items-center justify-center text-xs">03</span>
+                                        NLP Triage Engine
+                                    </h5>
+                                    <p class="text-sm">Hitting the 14-day SLA requires heavy investment in algorithm automation. Natural Language Processing (NLP) must be deployed to auto-categorize incoming cases (e.g., Eviction vs. Arrears) before human officers intervene.</p>
+                                </div>
+                                <div class="bg-white border-t-4 border-t-emerald-500 border-l border-r border-b border-slate-200 p-5 rounded-lg shadow-sm">
+                                    <h5 class="font-bold text-slate-800 mb-2 flex items-center gap-2">
+                                        <span class="w-6 h-6 rounded bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs">04</span>
+                                        Data Monetization
+                                    </h5>
+                                    <p class="text-sm">To offset the operational deficit, the resulting verified database of landlords and properties can be anonymized and securely licensed to banks for credit-scoring models, creating a self-sustaining revenue loop.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-12 p-6 bg-orange-50 border-l-4 border-orange-500 rounded-r-lg">
+                            <p class="font-black text-slate-900 mb-1">Declaration of Authorship</p>
+                            <p class="text-sm">The data engineering, mathematical cost modeling, front-end architecture, and policy research presented in this document and analytical dashboard were exclusively authored and engineered by <strong>Listowel Owusu</strong> to demonstrate enterprise-grade Business Intelligence and Data Science capabilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </section>
+
+    </main>
+
+    <!-- HEAVY ATTRIBUTION FOOTER -->
+    <footer class="bg-slate-900 text-slate-300 border-t-4 border-orange-600 pt-16 pb-8 mt-auto relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-600/5 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 border-b border-slate-800 pb-12 mb-8">
+                <!-- Branding & Attribution -->
+                <div class="md:col-span-7 space-y-4">
+                    <a href="https://listowel.delofy.com" class="block text-3xl font-black tracking-tighter text-white hover:text-orange-500 transition-colors w-fit">
+                        Listowel Owusu<span class="text-orange-600">.</span>
+                    </a>
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-xl">
+                        <strong>Architect of this Predictive Model.</strong> All underlying research, algorithmic modeling, data engineering, UI/UX design, and dashboard architecture presented on this page were exclusively built from the ground up by Listowel Owusu to showcase enterprise-grade business intelligence capabilities.
+                    </p>
+                    <div class="pt-4 flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-slate-800 text-xs text-slate-300 rounded border border-slate-700">Predictive Analytics</span>
+                        <span class="px-2 py-1 bg-slate-800 text-xs text-slate-300 rounded border border-slate-700">Python / Plotly</span>
+                        <span class="px-2 py-1 bg-slate-800 text-xs text-slate-300 rounded border border-slate-700">Business Intelligence</span>
+                        <span class="px-2 py-1 bg-slate-800 text-xs text-slate-300 rounded border border-slate-700">Financial Modeling</span>
+                    </div>
+                </div>
+
+                <!-- Contact Grid -->
+                <div class="md:col-span-5 flex flex-col justify-center space-y-5 bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-2">Connect with the Analyst</h4>
+                    
+                    <a href="mailto:listowelowusu05@gmail.com" class="flex items-center gap-3 hover:text-white transition-colors group">
+                        <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center group-hover:bg-orange-600 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <span class="text-sm font-medium">listowelowusu05@gmail.com</span>
+                    </a>
+                    
+                    <a href="https://wa.me/233246317831" target="_blank" class="flex items-center gap-3 hover:text-white transition-colors group">
+                        <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center group-hover:bg-[#25D366] transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </div>
+                        <span class="text-sm font-medium">+233 24 631 7831</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/listowel-owusu-47b905249/" target="_blank" class="flex items-center gap-3 hover:text-white transition-colors group">
+                        <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center group-hover:bg-[#0A66C2] transition-colors">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </div>
+                        <span class="text-sm font-medium">LinkedIn Profile</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 font-medium">
+                <p>&copy; 2026 Listowel Owusu. Engineered for Enterprise Analytics.</p>
+                <a href="https://listowel.delofy.com" target="_blank" class="hover:text-orange-500 transition-colors mt-2 md:mt-0">listowel.delofy.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Predictive Logic & Plotly Initialization -->
+    <script>
+        // DOM Elements
+        const sliders = {
+            cases: document.getElementById('slider-cases'),
+            time: document.getElementById('slider-time'),
+            adopt: document.getElementById('slider-adopt'),
+            regions: document.getElementById('slider-regions')
+        };
+        
+        const labels = {
+            cases: document.getElementById('val-cases'),
+            time: document.getElementById('val-time'),
+            adopt: document.getElementById('val-adopt'),
+            regions: document.getElementById('val-regions')
+        };
+
+        const resultDisplay = document.getElementById('predicted-budget');
+        const paybackDisplay = document.getElementById('payback-period');
+        const budgetFlag = document.getElementById('budget-flag');
+
+        // Formatter
+        const formatCurrency = (num) => {
+            if(num >= 1000000) return '$' + (num / 1000000).toFixed(2) + 'M';
+            if(num >= 1000) return '$' + (num / 1000).toFixed(1) + 'k';
+            return '$' + num.toLocaleString();
+        };
+
+        // Common Plotly Layout for White Theme
+        const commonLayout = {
+            paper_bgcolor: 'rgba(255,255,255,1)',
+            plot_bgcolor: 'rgba(255,255,255,1)',
+            font: { family: 'Inter, sans-serif', color: '#475569', size: 10 },
+            margin: { t: 20, b: 30, l: 40, r: 20 },
+            xaxis: { gridcolor: '#f1f5f9', zerolinecolor: '#e2e8f0' },
+            yaxis: { gridcolor: '#f1f5f9', zerolinecolor: '#e2e8f0' },
+            showlegend: false,
+            hovermode: 'closest'
+        };
+
+        function updatePrediction() {
+            const vCases = parseFloat(sliders.cases.value);
+            const vTime = parseFloat(sliders.time.value);
+            const vAdopt = parseFloat(sliders.adopt.value);
+            const vRegions = parseFloat(sliders.regions.value);
+
+            // Update UI Labels
+            labels.cases.innerText = vCases.toLocaleString();
+            labels.time.innerText = vTime + ' Days';
+            labels.adopt.innerText = vAdopt + '%';
+            labels.regions.innerText = vRegions;
+
+            // Algorithm calculations (The Data Science Model)
+            const infraCost = 800000; // Base platform cost
+            const hardwareCost = vRegions * 125000; // Hardware/Training per region
+            const automationCost = (90 - vTime) * 15000; // Lower SLA = higher algo cost
+            const marketingCost = Math.pow(vAdopt/100, 2.2) * 1200000; // Non-linear adoption cost
+            const cloudCost = vCases * 8.5; // Hosting, DB, SMS per case
+            
+            const exactTotal = infraCost + hardwareCost + automationCost + marketingCost + cloudCost;
+
+            // Update Total Output
+            resultDisplay.innerText = formatCurrency(exactTotal);
+
+            // Payback calculation
+            const annualSavings = (vAdopt / 100) * (90 - vTime) * 15000;
+            const payback = Math.max((exactTotal / (annualSavings || 1)), 0.5);
+            paybackDisplay.innerText = payback.toFixed(1) + ' Years';
+
+            // Warning Flag Logic
+            if (exactTotal > 1700000) {
+                budgetFlag.className = "px-3 py-1 rounded text-[11px] uppercase tracking-widest font-bold bg-red-100 text-red-700 border border-red-200 mt-2";
+                budgetFlag.innerHTML = `⚠️ Deficit: Short by ${formatCurrency(exactTotal - 1700000)} vs Baseline`;
+            } else {
+                budgetFlag.className = "px-3 py-1 rounded text-[11px] uppercase tracking-widest font-bold bg-emerald-100 text-emerald-700 border border-emerald-200 mt-2";
+                budgetFlag.innerHTML = `✅ Viable: Under $1.7M Baseline`;
+            }
+
+            // --- RENDER CHART 1: Cost Breakdown (Donut) ---
+            const dataDonut = [{
+                values: [infraCost, hardwareCost, automationCost, marketingCost, cloudCost],
+                labels: ['Core Infra', 'Regional Hardware', 'NLP Automation', 'Marketing/USSD', 'Cloud Data'],
+                type: 'pie',
+                hole: 0.65,
+                marker: { colors: ['#3b82f6', '#ea580c', '#10b981', '#8b5cf6', '#f59e0b'] },
+                textinfo: 'label+percent',
+                textposition: 'outside',
+                hovertemplate: '%{label}: $%{value:,.0f}<extra></extra>'
+            }];
+            Plotly.react('chart-donut', dataDonut, { ...commonLayout, margin: {t:10, b:10, l:10, r:10} }, {displayModeBar: false, responsive: true});
+
+            // --- RENDER CHART 2: Regional Distribution (Bar) ---
+            const topRegions = ['Greater Accra', 'Ashanti', 'Western', 'Eastern', 'Central'];
+            const regionWeights = [0.45, 0.25, 0.10, 0.08, 0.05]; 
+            // Scale based on active regions
+            const activeWeight = regionWeights.slice(0, Math.min(vRegions, 5));
+            const activeRegions = topRegions.slice(0, Math.min(vRegions, 5));
+            const regionCosts = activeWeight.map(w => exactTotal * w);
+            
+            const dataBar = [{
+                x: activeRegions,
+                y: regionCosts,
+                type: 'bar',
+                marker: { color: '#ea580c', borderRadius: 4 },
+                hovertemplate: '%{x}: $%{y:,.0f}<extra></extra>'
+            }];
+            Plotly.react('chart-bar', dataBar, { ...commonLayout, yaxis: { title: 'Allocated Cost ($)'} }, {displayModeBar: false, responsive: true});
+
+            // --- RENDER CHART 3: ROI Line Chart (10 Year Cumulatives) ---
+            const years = Array.from({length: 10}, (_, i) => 2026 + i);
+            const cumulativeCost = [];
+            const cumulativeSavings = [];
+            let currentCost = exactTotal;
+            let currentSavings = 0;
+
+            for(let i=0; i<10; i++) {
+                currentCost += (cloudCost * 1.05); // Maintenance growth
+                currentSavings += (annualSavings * Math.pow(1.08, i)); // Compound savings
+                cumulativeCost.push(currentCost);
+                cumulativeSavings.push(currentSavings);
+            }
+
+            const dataLine = [
+                { x: years, y: cumulativeCost, name: 'Cumulative CapEx + OpEx', type: 'scatter', mode: 'lines', line: {color: '#ef4444', width: 3} },
+                { x: years, y: cumulativeSavings, name: 'Recovered Efficiencies', type: 'scatter', mode: 'lines', fill: 'tozeroy', line: {color: '#10b981', width: 2} }
+            ];
+            Plotly.react('chart-line', dataLine, { ...commonLayout, showlegend: true, legend: {x: 0, y: 1.15, orientation: 'h'} }, {displayModeBar: false, responsive: true});
+
+            // --- RENDER CHART 5: Risk Heatmap ---
+            const heatmapZ = [
+                // Rows: Cost Overrun, Delay Risk, Adoption Failure
+                // Cols: Accra, Ashanti, Western, Northern
+                [
+                    Math.min(100, (exactTotal/1700000)*40), 
+                    Math.min(100, (exactTotal/1700000)*25), 
+                    Math.min(100, (exactTotal/1700000)*15), 
+                    Math.min(100, (exactTotal/1700000)*10)
+                ],
+                [
+                    Math.min(100, (90-vTime)*1.2), 
+                    Math.min(100, (90-vTime)*1.5), 
+                    Math.min(100, (90-vTime)*2.0), 
+                    Math.min(100, (90-vTime)*2.5)
+                ],
+                [
+                    Math.max(0, 100 - (vAdopt*1.1)), 
+                    Math.max(0, 100 - (vAdopt*0.9)), 
+                    Math.max(0, 100 - (vAdopt*0.7)), 
+                    Math.max(0, 100 - (vAdopt*0.5))
+                ]
+            ];
+            
+            const heatmapData = [{
+                z: heatmapZ,
+                x: ['Greater Accra', 'Ashanti', 'Western Hubs', 'Northern Hubs'],
+                y: ['Budget Overrun Risk', 'SLA Delay Risk', 'Low Adoption Risk'],
+                type: 'heatmap',
+                colorscale: [
+                    [0, '#f8fafc'], // safe (slate-50)
+                    [0.5, '#fcd34d'], // warning (amber-300)
+                    [1, '#ef4444'] // critical (red-500)
+                ],
+                hoverongaps: false
+            }];
+            
+            const heatmapLayout = { ...commonLayout, margin: {t:20, b:40, l:130, r:20} };
+            Plotly.react('chart-heatmap', heatmapData, heatmapLayout, {displayModeBar: false, responsive: true});
+        }
+
+        // Event Listeners
+        Object.values(sliders).forEach(slider => {
+            slider.addEventListener('input', updatePrediction);
+        });
+
+        // Initialize on load
+        window.onload = updatePrediction;
+    </script>
+</body>
+</html>

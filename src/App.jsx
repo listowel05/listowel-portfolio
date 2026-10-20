@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import './index.css';
 
 // --- SHARED REDDISH-BLACK BACKGROUND (mobile + desktop) ---
@@ -1056,6 +1057,7 @@ function App() {
   return (
     <>
       {view === 'portfolio' ? <Portfolio setView={setView} /> : <ProjectInquiry setView={setView} />}
+      <Analytics />
     </>
   );
 }

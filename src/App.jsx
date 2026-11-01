@@ -141,7 +141,7 @@ function Portfolio({ setView }) {
   ];
 
   const projects = [
-    { category: "Software Engineering & Business Analytics", title: "PCI-KHT Management System", desc: "Custom ministry intelligence website featuring real-time operational dashboards, secure public-access drop-boxes, and centralized congregational management.", bullets: ["Congregational KPI tracking", "Operational ministry dashboards", "Secure relational database design"], tech: ["React", "FastAPI (Python)", "PostgreSQL"], link: "https://demo-pcikht.delofy.com", image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=800&auto=format&fit=crop" },
+    { category: "Software Engineering & Business Analytics", title: "PCI-KHT Management System", desc: "Custom ministry intelligence website featuring real-time operational dashboards, secure public-access drop-boxes, and centralized congregational management.", bullets: ["Congregational KPI tracking", "Operational ministry dashboards", "Secure relational database design"], tech: ["React", "FastAPI (Python)", "PostgreSQL"], link: "https://demo-pcikht.delofy.com", image: "https://pcikht.delofy.com/pcikhtobuasi.png" },
     { category: "Data Analytics & BI", title: "Public Housing & Demographics Dashboard", desc: "Interactive Power BI dashboard tracking regional housing trends, compliance metrics, and demographic distributions in Ghana.", bullets: ["Real-time KPI tracking", "Data visualization", "Centralized public datasets"], tech: ["Power BI", "SQL", "Python (Pandas)"], link: "https://listowel.delofy.com/ghana_housing_analytics_listowel_owusu.html", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" },
     { category: "Full-Stack Web Engineering", title: "HHC Care Network Canada Website", desc: "A comprehensive healthcare service website platform connecting patients with caregivers through a seamless, accessible digital interface.", bullets: ["Clean UI/UX architecture", "Secure user data handling", "Responsive mobile-first design"], tech: ["React", "TypeScript", "Tailwind CSS"], link: "https://hhccare.ca/", image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop" },
     { category: "Data Science & BI", title: "Rent Control Digitalization Predictor", desc: "An enterprise-grade predictive model forecasting the exact capital expenditure, regional risk bottlenecks, and 10-year ROI for Ghana's $1.7M Rent Control digitalization project.", bullets: ["Scikit-Learn algorithm forecasting", "Dynamic CapEx & risk heatmaps", "Interactive what-if policy simulations"], tech: ["Python (Scikit-Learn)", "Plotly.js", "Data Engineering"], link: "advanced_rcd_roi.html", image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop" },
@@ -336,7 +336,7 @@ function Portfolio({ setView }) {
             <ScrollReveal delay={200} className="relative z-30 flex flex-col items-center pt-[100px]">
               <div className="w-16 h-[3px] bg-[#ea580c]/80 mb-5 rounded-full"></div>
               <p className="text-[16px] text-white/80 font-medium tracking-wide">
-                Business Analyst <span className="text-[#ea580c] mx-2">|</span> Web Engineer
+                Business Analyst <span className="text-[#ea580c] mx-2">|</span> Software Engineer
               </p>
             </ScrollReveal>
 
